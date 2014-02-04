@@ -1,0 +1,165 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+/*
+    ____  __           __   __  _____ 
+   / __ )/ /___  _____/ /__/  |/  / / 
+  / __  / / __ \/ ___/ //_/ /|_/ / /  
+ / /_/ / / /_/ / /__/ ,< / /  / / /___
+/_____/_/\____/\___/_/|_/_/  /_/_____/
+
+*/
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                                   IMPORTS                                  */
+/*////////////////////////////////////////////////////////////////////////////*/
+/* Fonts */
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                       SASS VARS, MIXINS AND FUNCTIONS                      */
+/*////////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                                   RESET                                    */
+/*////////////////////////////////////////////////////////////////////////////*/
+* {
+  margin: 0;
+  padding: 0; }
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                                  GENERAL                                   */
+/*////////////////////////////////////////////////////////////////////////////*/
+.in {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  max-width: 660px;
+  padding: 60px 0; }
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                                    FONT                                    */
+/*////////////////////////////////////////////////////////////////////////////*/
+html {
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14pt;
+  line-height: 1.6em;
+  color: #575756;
+  word-wrap: break-word;
+  text-align: center; }
+
+h1, h2, h3, h4, h5, h6, p, li, div, span {
+  font-weight: 300; }
+
+p {
+  padding-bottom: 1.6em;
+  text-align: left; }
+
+a, a span {
+  color: #6176f6;
+  text-decoration: none; }
+  a:hover, a span:hover {
+    text-decoration: underline;
+    color: #0d2be4; }
+
+::selection {
+  background-color: #f1fc82; }
+
+::-moz-selection {
+  background-color: #f1fc82; }
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                                 AWW BAR                                    */
+/*////////////////////////////////////////////////////////////////////////////*/
+#awwBar {
+  height: 60px;
+  background-color: #EDEDED;
+  margin-bottom: 30px; }
+  #awwBar img {
+    display: block;
+    margin: 0 auto;
+    height: 24px;
+    padding: 18px 0px; }
+  #awwBar a img:hover {
+    opacity: 0.5; }
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                             	     CONTENT                                  */
+/*////////////////////////////////////////////////////////////////////////////*/
+#icon {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+  padding: 60px 0; }
+
+h1, h2 {
+  padding-bottom: 60px; }
+
+h1 {
+  font-size: 48pt; }
+
+h2 {
+  font-size: 28pt;
+  line-height: 1.4em; }
+  @media screen and (max-width: 600px) {
+    h2 {
+      font-size: 20pt; } }
+
+#content .grid {
+  position: relative;
+  overflow: hidden;
+  margin: 60px 0 120px 0; }
+  #content .grid .macbook {
+    width: 60%; }
+  #content .grid .macbook:nth-child(1) {
+    position: absolute;
+    left: -15%; }
+  #content .grid .macbook:nth-child(2) {
+    position: relative;
+    float: right;
+    right: -15%; }
+  #content .grid #arrow {
+    width: 8%;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: 46%;
+    bottom: 46%; }
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                                     BUTTON                                 */
+/*////////////////////////////////////////////////////////////////////////////*/
+.button {
+  font-size: 20pt;
+  display: block;
+  margin: 0 auto;
+  padding: 12px 0;
+  width: 250px;
+  color: white;
+  background-color: #4656FF; }
+  .button:hover {
+    text-decoration: none;
+    background-color: #B2B2B2;
+    color: white; }
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                             	     FOOTER                                   */
+/*////////////////////////////////////////////////////////////////////////////*/
+#footer {
+  margin-top: 120px;
+  background-color: #EDEDED;
+  color: #B2B2B2; }
+  #footer a:hover {
+    opacity: 0.5; }
+  #footer img {
+    height: 20px;
+    padding: 0 10px; }
+  #footer p {
+    text-align: center; }
+  @media screen and (min-width: 500px) {
+    #footer p {
+      float: left;
+      line-height: 1em;
+      padding: 0; }
+    #footer .grid {
+      float: right;
+      line-height: 0em; }
+    #footer .in {
+      overflow: hidden; } }

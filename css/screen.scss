@@ -1,0 +1,233 @@
+/*
+    ____  __           __   __  _____ 
+   / __ )/ /___  _____/ /__/  |/  / / 
+  / __  / / __ \/ ___/ //_/ /|_/ / /  
+ / /_/ / / /_/ / /__/ ,< / /  / / /___
+/_____/_/\____/\___/_/|_/_/  /_/_____/
+
+*/
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                                   IMPORTS                                  */
+/*////////////////////////////////////////////////////////////////////////////*/
+
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                       SASS VARS, MIXINS AND FUNCTIONS                      */
+/*////////////////////////////////////////////////////////////////////////////*/
+
+@mixin centerWithWidth($width) {
+	display: block;
+	margin: 0 auto;
+	max-width: $width;
+}
+
+@mixin center {
+	display: block;
+	margin: 0 auto;
+}
+
+$generalPadding: 60px;
+$paragraphPadding: 1.6em;
+
+$fontSize: 14pt;
+$fontColor: #575756;
+$linkColor: #6176F6;
+$selectionColor: #F1FC82;
+
+$codeBackgroundColor: lighten($fontColor, 71%);
+$codeBorder: solid lighten($fontColor, 60%) 1px;
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                                   RESET                                    */
+/*////////////////////////////////////////////////////////////////////////////*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                                  GENERAL                                   */
+/*////////////////////////////////////////////////////////////////////////////*/
+
+.in{
+	width: 70%;
+	@include centerWithWidth(660px);
+	padding: $generalPadding 0;
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                                    FONT                                    */
+/*////////////////////////////////////////////////////////////////////////////*/
+
+html {
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: $fontSize;
+	line-height: 1.6em;
+	color: $fontColor;
+	word-wrap: break-word;
+	text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, div, span {
+	font-weight: 300;
+}
+
+p {
+	padding-bottom: $paragraphPadding;
+	text-align: left;
+}
+
+a, a span {
+	color: $linkColor;
+    text-decoration: none;
+    &:hover {
+		text-decoration: underline;
+		color: darken($linkColor, 20%);
+	}
+}
+
+::selection { 
+	background-color: $selectionColor;
+}
+::-moz-selection { 
+	background-color: $selectionColor; 
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                                 AWW BAR                                    */
+/*////////////////////////////////////////////////////////////////////////////*/
+
+#awwBar {
+	$awwBarHeight: 60px;
+	height:$awwBarHeight;
+	background-color: #EDEDED;
+	margin-bottom: $generalPadding/2;
+	img {
+		@include center;
+		$logoPadding: 18px;
+		height: $awwBarHeight - ($logoPadding * 2);
+		padding: $logoPadding 0px;
+	}
+	a img:hover {
+		opacity:0.5;
+	}
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                             	     CONTENT                                  */
+/*////////////////////////////////////////////////////////////////////////////*/
+
+#icon {
+	@include centerWithWidth(200px);
+	padding: $generalPadding 0;
+}
+
+h1, h2 {
+	padding-bottom: $generalPadding;
+}
+
+h1 {
+	font-size: 48pt;
+}
+
+h2 {
+	font-size: 28pt;
+	line-height: 1.4em;
+	// Mobil
+	@media screen and (max-width: 600px) {
+		font-size: 20pt;
+	}
+}
+
+#content {
+	.grid {
+		position: relative;
+		overflow: hidden;
+		margin: $generalPadding 0 $generalPadding*2 0;
+		.macbook {
+			width: 60%;
+		}
+		.macbook:nth-child(1) {
+			position: absolute;
+			left: -15%;
+		}
+		.macbook:nth-child(2) {
+//			position: absolute;
+//			right: -15%;
+			position: relative;
+			float: right;
+			right: -15%;
+		}
+		#arrow {
+			width: 8%;
+			@include center;
+			position: absolute;
+			// 50% - (8% / 2%)
+			left: 46%;
+			bottom: 46%;
+		}
+	}
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                                     BUTTON                                 */
+/*////////////////////////////////////////////////////////////////////////////*/
+
+.button {
+	font-size: 20pt;
+	@include center;
+	padding: 12px 0;
+	width: 250px;
+	color: white;
+	background-color: #4656FF;
+	&:hover {
+		text-decoration: none;
+		background-color: #B2B2B2;
+		color: white;
+	}
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                             	     FOOTER                                   */
+/*////////////////////////////////////////////////////////////////////////////*/
+
+#footer {
+	margin-top: $generalPadding*2;
+	background-color: #EDEDED;
+	color: #B2B2B2;
+
+	a:hover {
+		opacity:0.5;
+	}
+	img {
+		height: 20px;
+		padding: 0 10px;
+	}
+	p {
+		text-align: center;
+	}
+
+	// Desktop
+	@media screen and (min-width: 500px) {
+		p {
+			float: left;
+			line-height: 1em;
+			padding: 0;
+		}
+		.grid {
+			float: right;
+			line-height: 0em;
+		}
+		.in {
+			overflow: hidden;
+		}
+	}
+}
