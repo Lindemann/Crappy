@@ -22,16 +22,6 @@
   padding: 0; }
 
 /*////////////////////////////////////////////////////////////////////////////*/
-/*                                  GENERAL                                   */
-/*////////////////////////////////////////////////////////////////////////////*/
-.in {
-  width: 70%;
-  display: block;
-  margin: 0 auto;
-  max-width: 660px;
-  padding: 60px 0; }
-
-/*////////////////////////////////////////////////////////////////////////////*/
 /*                                    FONT                                    */
 /*////////////////////////////////////////////////////////////////////////////*/
 html {
@@ -136,7 +126,7 @@ h2 {
   background-color: #4656FF; }
   .button:hover {
     text-decoration: none;
-    background-color: #B2B2B2;
+    background-color: #A01EFC;
     color: white; }
 
 /*////////////////////////////////////////////////////////////////////////////*/
@@ -146,6 +136,12 @@ h2 {
   margin-top: 120px;
   background-color: #EDEDED;
   color: #B2B2B2; }
+  #footer .in {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 60px 0; }
   #footer a:hover {
     opacity: 0.5; }
   #footer img {

@@ -50,16 +50,6 @@ $codeBorder: solid lighten($fontColor, 60%) 1px;
 }
 
 /*////////////////////////////////////////////////////////////////////////////*/
-/*                                  GENERAL                                   */
-/*////////////////////////////////////////////////////////////////////////////*/
-
-.in{
-	width: 70%;
-	@include centerWithWidth(660px);
-	padding: $generalPadding 0;
-}
-
-/*////////////////////////////////////////////////////////////////////////////*/
 /*                                    FONT                                    */
 /*////////////////////////////////////////////////////////////////////////////*/
 
@@ -190,7 +180,7 @@ h2 {
 	background-color: #4656FF;
 	&:hover {
 		text-decoration: none;
-		background-color: #B2B2B2;
+		background-color: #A01EFC;
 		color: white;
 	}
 }
@@ -203,7 +193,11 @@ h2 {
 	margin-top: $generalPadding*2;
 	background-color: #EDEDED;
 	color: #B2B2B2;
-
+	.in{
+		width: 90%;
+		@include centerWithWidth(100%);
+		padding: $generalPadding 0;
+	}
 	a:hover {
 		opacity:0.5;
 	}
