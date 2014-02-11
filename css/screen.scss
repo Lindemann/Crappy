@@ -133,6 +133,9 @@ h2 {
 	line-height: 1.4em;
 	// Mobil
 	@media screen and (max-width: 600px) {
+		font-size: 20pt;
+	}
+	@media screen and (max-width: 400px) {
 		font-size: 14pt;
 	}
 }
