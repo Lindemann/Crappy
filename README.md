@@ -1,4 +1,4 @@
-<img src="http://lindemann.github.io/Crappy/images/icon.png" alt="icon" width="120" align="middle">
+<img src="http://lindemann.github.io/Crappy/images/icon.png" alt="icon" width="120">
 
 ###Crappy - OSX menu bar app that hides all that crap on your desktop
 http://lindemann.github.io/Crappy
